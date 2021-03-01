@@ -1,133 +1,621 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
     <meta charset="utf-8" />
-    <meta name="baidu-site-verification" content="vvVgSQUzPU" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <meta name="keywords" content="虎虎|博客|个人|utone|Utone|">
-    <meta name="description" content="骑士恨煎蛋，骑士恨孜然">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="不会飞的doge" />
     
     <title>
-       Archive -  DogeFly
+      归档 - DogeFly
     </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     
-<link rel="stylesheet" href="/css/style.css">
- 
-    
-      <link rel="icon" href="/images/favicon.ico" />
-    
+<link rel="stylesheet" href="/style/style.css">
+
   <meta name="generator" content="Hexo 5.3.0"></head>
   <body>
-    <div id="container">
-      <div id="main-left">
-        <div id="introduce">
-          <div class="logo-worp">
-            <a href="/"><img class="logo" src="/images/logo.png" alt=""/></a>
-          </div>
-          <ul>
-            
-              <li><a href="/home"> 主页 </a></li>
-            
-              <li><a href="/archives"> 文章 </a></li>
-            
-              <li><a href="/about"> 关于 </a></li>
-            
-              <li><a href="/atom.xml"> RSS </a></li>
-            
-            <li>
-              <img id="search-img" src="/images/search.svg" alt="search" />
-            </li>
-          </ul>
+    <canvas id='pagemap'></canvas>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          首页
+        </a>
+        
+        <a href="/archives" class="current">
+          归档
+        </a>
+        
+        <a href="/categories" class="">
+          分类
+        </a>
+        
+        <a href="/tags" class="">
+          标签
+        </a>
+        
+        <a href="/about" class="">
+          关于
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author"></div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author"></div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        </div>
+
+        <div class="nav">
           
+          <a href="/" class="">
+            首页
+          </a>
+          
+          <a href="/archives" class="current">
+            归档
+          </a>
+          
+          <a href="/categories" class="">
+            分类
+          </a>
+          
+          <a href="/tags" class="">
+            标签
+          </a>
+          
+          <a href="/about" class="">
+            关于
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="b" target="_block">
+              <span class="iconfont icon-0"></span>
+            </a>
+            
+            <a href="i" target="_block">
+              <span class="iconfont icon-1"></span>
+            </a>
+            
+            <a href="l" target="_block">
+              <span class="iconfont icon-2"></span>
+            </a>
+            
+            <a href="i" target="_block">
+              <span class="iconfont icon-3"></span>
+            </a>
+            
+            <a href="b" target="_block">
+              <span class="iconfont icon-4"></span>
+            </a>
+            
+            <a href="i" target="_block">
+              <span class="iconfont icon-5"></span>
+            </a>
+            
+            <a href="l" target="_block">
+              <span class="iconfont icon-6"></span>
+            </a>
+            
+            <a href="i" target="_block">
+              <span class="iconfont icon-7"></span>
+            </a>
+            
+            <a href=":" target="_block">
+              <span class="iconfont icon-8"></span>
+            </a>
+            
+            <a href="&#39;" target="_block">
+              <span class="iconfont icon-9"></span>
+            </a>
+            
+            <a href="h" target="_block">
+              <span class="iconfont icon-10"></span>
+            </a>
+            
+            <a href="t" target="_block">
+              <span class="iconfont icon-11"></span>
+            </a>
+            
+            <a href="t" target="_block">
+              <span class="iconfont icon-12"></span>
+            </a>
+            
+            <a href="p" target="_block">
+              <span class="iconfont icon-13"></span>
+            </a>
+            
+            <a href="s" target="_block">
+              <span class="iconfont icon-14"></span>
+            </a>
+            
+            <a href=":" target="_block">
+              <span class="iconfont icon-15"></span>
+            </a>
+            
+            <a href="/" target="_block">
+              <span class="iconfont icon-16"></span>
+            </a>
+            
+            <a href="/" target="_block">
+              <span class="iconfont icon-17"></span>
+            </a>
+            
+            <a href="s" target="_block">
+              <span class="iconfont icon-18"></span>
+            </a>
+            
+            <a href="p" target="_block">
+              <span class="iconfont icon-19"></span>
+            </a>
+            
+            <a href="a" target="_block">
+              <span class="iconfont icon-20"></span>
+            </a>
+            
+            <a href="c" target="_block">
+              <span class="iconfont icon-21"></span>
+            </a>
+            
+            <a href="e" target="_block">
+              <span class="iconfont icon-22"></span>
+            </a>
+            
+            <a href="." target="_block">
+              <span class="iconfont icon-23"></span>
+            </a>
+            
+            <a href="b" target="_block">
+              <span class="iconfont icon-24"></span>
+            </a>
+            
+            <a href="i" target="_block">
+              <span class="iconfont icon-25"></span>
+            </a>
+            
+            <a href="l" target="_block">
+              <span class="iconfont icon-26"></span>
+            </a>
+            
+            <a href="i" target="_block">
+              <span class="iconfont icon-27"></span>
+            </a>
+            
+            <a href="b" target="_block">
+              <span class="iconfont icon-28"></span>
+            </a>
+            
+            <a href="i" target="_block">
+              <span class="iconfont icon-29"></span>
+            </a>
+            
+            <a href="l" target="_block">
+              <span class="iconfont icon-30"></span>
+            </a>
+            
+            <a href="i" target="_block">
+              <span class="iconfont icon-31"></span>
+            </a>
+            
+            <a href="." target="_block">
+              <span class="iconfont icon-32"></span>
+            </a>
+            
+            <a href="c" target="_block">
+              <span class="iconfont icon-33"></span>
+            </a>
+            
+            <a href="o" target="_block">
+              <span class="iconfont icon-34"></span>
+            </a>
+            
+            <a href="m" target="_block">
+              <span class="iconfont icon-35"></span>
+            </a>
+            
+            <a href="/" target="_block">
+              <span class="iconfont icon-36"></span>
+            </a>
+            
+            <a href="8" target="_block">
+              <span class="iconfont icon-37"></span>
+            </a>
+            
+            <a href="8" target="_block">
+              <span class="iconfont icon-38"></span>
+            </a>
+            
+            <a href="2" target="_block">
+              <span class="iconfont icon-39"></span>
+            </a>
+            
+            <a href="0" target="_block">
+              <span class="iconfont icon-40"></span>
+            </a>
+            
+            <a href="0" target="_block">
+              <span class="iconfont icon-41"></span>
+            </a>
+            
+            <a href="2" target="_block">
+              <span class="iconfont icon-42"></span>
+            </a>
+            
+            <a href="7" target="_block">
+              <span class="iconfont icon-43"></span>
+            </a>
+            
+            <a href="4" target="_block">
+              <span class="iconfont icon-44"></span>
+            </a>
+            
+            <a href="&#39;" target="_block">
+              <span class="iconfont icon-45"></span>
+            </a>
+            
+            <a href="function () {
+    var retValue = null;
+
+    state.currentCmd = cmd;
+    state.error = null;
+    state.errorCode = 0;
+
+    try {
+      var args = [].slice.call(arguments, 0);
+
+      // Log the command to stderr, if appropriate
+      if (config.verbose) {
+        console.error.apply(console, [cmd].concat(args));
+      }
+
+      // If this is coming from a pipe, let&#39;s set the pipedValue (otherwise, set
+      // it to the empty string)
+      state.pipedValue = (this &amp;&amp; typeof this.stdout === &#39;string&#39;) ? this.stdout : &#39;&#39;;
+
+      if (options.unix === false) { // this branch is for exec()
+        retValue = fn.apply(this, args);
+      } else { // and this branch is for everything else
+        if (isObject(args[0]) &amp;&amp; args[0].constructor.name === &#39;Object&#39;) {
+          // a no-op, allowing the syntax `touch({&#39;-r&#39;: file}, ...)`
+        } else if (args.length === 0 || typeof args[0] !== &#39;string&#39; || args[0].length &lt;= 1 || args[0][0] !== &#39;-&#39;) {
+          args.unshift(&#39;&#39;); // only add dummy option if &#39;-option&#39; not already present
+        }
+
+        // flatten out arrays that are arguments, to make the syntax:
+        //    `cp([file1, file2, file3], dest);`
+        // equivalent to:
+        //    `cp(file1, file2, file3, dest);`
+        args = args.reduce(function (accum, cur) {
+          if (Array.isArray(cur)) {
+            return accum.concat(cur);
+          }
+          accum.push(cur);
+          return accum;
+        }, []);
+
+        // Convert ShellStrings (basically just String objects) to regular strings
+        args = args.map(function (arg) {
+          if (isObject(arg) &amp;&amp; arg.constructor.name === &#39;String&#39;) {
+            return arg.toString();
+          }
+          return arg;
+        });
+
+        // Expand the &#39;~&#39; if appropriate
+        var homeDir = os.homedir();
+        args = args.map(function (arg) {
+          if (typeof arg === &#39;string&#39; &amp;&amp; arg.slice(0, 2) === &#39;~/&#39; || arg === &#39;~&#39;) {
+            return arg.replace(/^~/, homeDir);
+          }
+          return arg;
+        });
+
+        // Perform glob-expansion on all arguments after globStart, but preserve
+        // the arguments before it (like regexes for sed and grep)
+        if (!config.noglob &amp;&amp; options.allowGlobbing === true) {
+          args = args.slice(0, options.globStart).concat(expand(args.slice(options.globStart)));
+        }
+
+        try {
+          // parse options if options are provided
+          if (isObject(options.cmdOptions)) {
+            args[0] = parseOptions(args[0], options.cmdOptions);
+          }
+
+          retValue = fn.apply(this, args);
+        } catch (e) {
+          /* istanbul ignore else */
+          if (e.msg === &#39;earlyExit&#39;) {
+            retValue = e.retValue;
+          } else {
+            throw e; // this is probably a bug that should be thrown up the call stack
+          }
+        }
+      }
+    } catch (e) {
+      /* istanbul ignore next */
+      if (!state.error) {
+        // If state.error hasn&#39;t been set it&#39;s an error thrown by Node, not us - probably a bug...
+        e.name = &#39;ShellJSInternalError&#39;;
+        throw e;
+      }
+      if (config.fatal) throw e;
+    }
+
+    if (options.wrapOutput &amp;&amp;
+        (typeof retValue === &#39;string&#39; || Array.isArray(retValue))) {
+      retValue = new ShellString(retValue, state.error, state.errorCode);
+    }
+
+    state.currentCmd = &#39;shell.js&#39;;
+    return retValue;
+  }" target="_block">
+              <span class="iconfont icon-to"></span>
+            </a>
+            
+            <a href="function () {
+    var retValue = null;
+
+    state.currentCmd = cmd;
+    state.error = null;
+    state.errorCode = 0;
+
+    try {
+      var args = [].slice.call(arguments, 0);
+
+      // Log the command to stderr, if appropriate
+      if (config.verbose) {
+        console.error.apply(console, [cmd].concat(args));
+      }
+
+      // If this is coming from a pipe, let&#39;s set the pipedValue (otherwise, set
+      // it to the empty string)
+      state.pipedValue = (this &amp;&amp; typeof this.stdout === &#39;string&#39;) ? this.stdout : &#39;&#39;;
+
+      if (options.unix === false) { // this branch is for exec()
+        retValue = fn.apply(this, args);
+      } else { // and this branch is for everything else
+        if (isObject(args[0]) &amp;&amp; args[0].constructor.name === &#39;Object&#39;) {
+          // a no-op, allowing the syntax `touch({&#39;-r&#39;: file}, ...)`
+        } else if (args.length === 0 || typeof args[0] !== &#39;string&#39; || args[0].length &lt;= 1 || args[0][0] !== &#39;-&#39;) {
+          args.unshift(&#39;&#39;); // only add dummy option if &#39;-option&#39; not already present
+        }
+
+        // flatten out arrays that are arguments, to make the syntax:
+        //    `cp([file1, file2, file3], dest);`
+        // equivalent to:
+        //    `cp(file1, file2, file3, dest);`
+        args = args.reduce(function (accum, cur) {
+          if (Array.isArray(cur)) {
+            return accum.concat(cur);
+          }
+          accum.push(cur);
+          return accum;
+        }, []);
+
+        // Convert ShellStrings (basically just String objects) to regular strings
+        args = args.map(function (arg) {
+          if (isObject(arg) &amp;&amp; arg.constructor.name === &#39;String&#39;) {
+            return arg.toString();
+          }
+          return arg;
+        });
+
+        // Expand the &#39;~&#39; if appropriate
+        var homeDir = os.homedir();
+        args = args.map(function (arg) {
+          if (typeof arg === &#39;string&#39; &amp;&amp; arg.slice(0, 2) === &#39;~/&#39; || arg === &#39;~&#39;) {
+            return arg.replace(/^~/, homeDir);
+          }
+          return arg;
+        });
+
+        // Perform glob-expansion on all arguments after globStart, but preserve
+        // the arguments before it (like regexes for sed and grep)
+        if (!config.noglob &amp;&amp; options.allowGlobbing === true) {
+          args = args.slice(0, options.globStart).concat(expand(args.slice(options.globStart)));
+        }
+
+        try {
+          // parse options if options are provided
+          if (isObject(options.cmdOptions)) {
+            args[0] = parseOptions(args[0], options.cmdOptions);
+          }
+
+          retValue = fn.apply(this, args);
+        } catch (e) {
+          /* istanbul ignore else */
+          if (e.msg === &#39;earlyExit&#39;) {
+            retValue = e.retValue;
+          } else {
+            throw e; // this is probably a bug that should be thrown up the call stack
+          }
+        }
+      }
+    } catch (e) {
+      /* istanbul ignore next */
+      if (!state.error) {
+        // If state.error hasn&#39;t been set it&#39;s an error thrown by Node, not us - probably a bug...
+        e.name = &#39;ShellJSInternalError&#39;;
+        throw e;
+      }
+      if (config.fatal) throw e;
+    }
+
+    if (options.wrapOutput &amp;&amp;
+        (typeof retValue === &#39;string&#39; || Array.isArray(retValue))) {
+      retValue = new ShellString(retValue, state.error, state.errorCode);
+    }
+
+    state.currentCmd = &#39;shell.js&#39;;
+    return retValue;
+  }" target="_block">
+              <span class="iconfont icon-toEnd"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
         </div>
       </div>
-      <div id="main-right">
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <div id="archives">
+    
+        <div class="title">
+            归档 
+            
+        </div>
+    
 
-<h1 class="archive-other">
+
+
+
     
     
-</h1>
-
-
-
-
-
-
-<section class="archives-wrap">
-    <div class="archive-meta-wrap">
-        <a href="/archives/2021" class="archive-meta">
-            2021
-        </a>
-    </div>
-    <div class="archives">
-        
-        <article class="list">
-            <span class="list-time">
-                <a href="/2021/02/11/Hello-My-Blog/">
-                    2021-02-11
-                </a>
-            </span>
-            <span class="list-title">
-                <a href="/2021/02/11/Hello-My-Blog/">
-                    Hello My Blog
-                </a>
-            </span>
-        </article>
-        
-
-
-        <article class="list">
-            <span class="list-time">
-                <a href="/2021/02/11/Myblog/">
-                    2021-02-11
-                </a>
-            </span>
-            <span class="list-title">
-                <a href="/2021/02/11/Myblog/">
-                    Myblog
-                </a>
-            </span>
-        </article>
-        
-
-
-        <article class="list">
-            <span class="list-time">
-                <a href="/2021/02/11/test/">
-                    2021-02-11
-                </a>
-            </span>
-            <span class="list-title">
-                <a href="/2021/02/11/test/">
-                    test
-                </a>
-            </span>
-        </article>
-        
-        
-    </div>
-</section>
-
-<div class="list-paginator">
+    <section class="wrap">
+        <div class="meta">
+            <a href="/archives/2021" >
+                2021
+            </a>
+        </div>
+        <div class="year">
+            
+            <article class="item">
+            <a href="/2021/02/11/test/" title="test">
+                <span>2021/02/11</span>
+                <span>test</span>
+            </a>
+            </article>
+            
+    
+        </div>
+    </section>
+      
+<div class="paginator">
     <span class="page-number current">1</span>
-</div></div>
+</div>
+</div>
+
+        <footer>
+          <div class="copyright">
+            ©2021
+            <a href="http://example.com">不会飞的Doge</a> Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> |
+            <a target="_blank" rel="noopener" href="https://github.com/shixiaohu2206/hexo-theme-huhu">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
     </div>
-    <div id="footer">骑士恨煎蛋，骑士恨孜然</div>
-    <img id="top" src="/images/up-circle.svg" alt="top" />
-    
   </body>
+  
 </html>
-<!-- 加载主题脚本文件 -->
-
-<script src="/scripts/utone.js"></script>
-
-
 <script type="text/javascript">
-  window.onload = function() {
-    scroll.init()
-    siteSearch.init()
-  }
-</script>
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"service_worker\":{\"open\":false}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 
